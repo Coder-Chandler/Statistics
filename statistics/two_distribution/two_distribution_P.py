@@ -30,3 +30,5 @@ class Distribution(object):
         return Probability
 
 shooting = Distribution()
+
+
