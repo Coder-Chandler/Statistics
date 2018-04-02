@@ -30,4 +30,3 @@ class Distribution(object):
         return Probability
 
 shooting = Distribution()
-print(shooting.distribution_shoot(10,3))
