@@ -29,6 +29,5 @@ class Distribution(object):
         Probability = a * b
         return Probability
 
-shooting = Distribution()
 
 
