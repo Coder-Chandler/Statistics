@@ -22,7 +22,7 @@ class Distribution(object):
         :return: 投篮x次得到n次命中的概率
         假设投篮命中率30%
         """
-        a = (0.3**n)*((1-0.3)**(x-n))
+        a = (0.3 ** n) * ((1 - 0.3) ** (x - n))
         denominator = math.factorial(n) * math.factorial((x - n))
         Numerator = math.factorial(x)
         b = Numerator / denominator
@@ -30,4 +30,10 @@ class Distribution(object):
         return Probability
 
 
-
+def myrange(n):
+    i = 0
+    while i != n:
+        i += 1
+        yield i
+r = myrange(10000000000)
+print(r)
