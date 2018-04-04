@@ -32,11 +32,11 @@ class Distribution(object):
 
 class iter(object):
     def __init__(self, max):
-        self.max = max
-        self.n = 0
+        self.max = max-1
+        self.n = -1
 
     def __iter__(self):
-        self.n = 0
+        self.n = -1
         return self
 
     def __next__(self):
@@ -46,6 +46,18 @@ class iter(object):
         else:
             raise StopIteration
 
+    def mynext(self):
+        return self.__next__()
+
 
 t = iter(5)
-t.next()
+print(t)
+print(t.mynext())
+print(t.mynext())
+print(t.mynext())
+print(t.mynext())
+print(t.mynext())
+print(t.mynext())
+
+
+
