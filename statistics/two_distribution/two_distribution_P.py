@@ -30,10 +30,4 @@ class Distribution(object):
         return Probability
 
 
-def myrange(n):
-    i = 0
-    while i != n:
-        i += 1
-        yield i
-r = myrange(10000000000)
-print(r)
+
