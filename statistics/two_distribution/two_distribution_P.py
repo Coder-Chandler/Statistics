@@ -29,35 +29,20 @@ class Distribution(object):
         Probability = a * b
         return Probability
 
+class test(object):
+    @classmethod
+    def c_foo(cls):
+        print('class method')
 
-class iter(object):
-    def __init__(self, max):
-        self.max = max-1
-        self.n = -1
+    def foo(self):
+        print('instance method')
 
-    def __iter__(self):
-        self.n = -1
-        return self
-
-    def __next__(self):
-        if self.n < self.max:
-            self.n += 1
-            return self.n
-        else:
-            raise StopIteration
-
-    def mynext(self):
-        return self.__next__()
-
-
-t = iter(5)
-print(t)
-print(t.mynext())
-print(t.mynext())
-print(t.mynext())
-print(t.mynext())
-print(t.mynext())
-print(t.mynext())
-
-
-
+    @staticmethod
+    def st_foo():
+        n = 'static method'
+        print(n)
+t = test()
+t.foo()
+t.c_foo()
+test.c_foo()
+t.st_foo()
