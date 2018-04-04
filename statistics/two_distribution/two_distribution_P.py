@@ -29,20 +29,13 @@ class Distribution(object):
         Probability = a * b
         return Probability
 
-class test(object):
-    @classmethod
-    def c_foo(cls):
-        print('class method')
 
-    def foo(self):
-        print('instance method')
+def bar(n):
+    n.append(1)
+    print(n)
 
-    @staticmethod
-    def st_foo():
-        n = 'static method'
-        print(n)
-t = test()
-t.foo()
-t.c_foo()
-test.c_foo()
-t.st_foo()
+
+b = []
+print(b)  # 输出：[]
+bar(b)  # 输出：[1]
+print(b)  # 输出：[1]
