@@ -30,10 +30,3 @@ class Distribution(object):
         return Probability
 
 
-def myappend(new, list=None):
-    list.append(new)
-    return list
-
-print(myappend(1,[]))
-print(myappend(2,[]))
-print(myappend(3,[]))
