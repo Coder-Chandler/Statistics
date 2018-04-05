@@ -28,5 +28,8 @@ class Distribution(object):
         b = Numerator / denominator
         Probability = a * b
         return Probability
-
-
+import functools
+print(list(map(lambda x: x*x, [1,2,3,3,4,5])))
+print(list(filter(lambda x: x>3, [1,2,3,3,4,5])))
+m = lambda x: -x if x<0 else x
+print(m(0))
