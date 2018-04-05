@@ -28,8 +28,33 @@ class Distribution(object):
         b = Numerator / denominator
         Probability = a * b
         return Probability
-import functools
-print(list(map(lambda x: x*x, [1,2,3,3,4,5])))
-print(list(filter(lambda x: x>3, [1,2,3,3,4,5])))
-m = lambda x: -x if x<0 else x
-print(m(0))
+
+
+def count():
+    fs = []
+    for i in range(1, 4):
+        def foo(i=i):
+            return i
+
+        fs.append(foo)
+    return fs
+
+
+f1 = count()
+for i in f1:
+    print(i())
+
+
+def new_fn(f):
+    def fn(x):
+        print('call function: ' + f.__name__ + '()')
+        x = x * 2
+        return f(x)
+
+    return fn
+
+@new_fn
+def bar(x):
+    return x ** 2
+
+print(bar(2))
