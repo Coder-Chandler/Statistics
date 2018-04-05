@@ -30,12 +30,10 @@ class Distribution(object):
         return Probability
 
 
-def bar(n):
-    n.append(1)
-    print(n)
+def myappend(new, list=None):
+    list.append(new)
+    return list
 
-
-b = []
-print(b)  # 输出：[]
-bar(b)  # 输出：[1]
-print(b)  # 输出：[1]
+print(myappend(1,[]))
+print(myappend(2,[]))
+print(myappend(3,[]))
