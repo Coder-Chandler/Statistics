@@ -30,31 +30,3 @@ class Distribution(object):
         return Probability
 
 
-def count():
-    fs = []
-    for i in range(1, 4):
-        def foo(i=i):
-            return i
-
-        fs.append(foo)
-    return fs
-
-
-f1 = count()
-for i in f1:
-    print(i())
-
-
-def new_fn(f):
-    def fn(x):
-        print('call function: ' + f.__name__ + '()')
-        x = x * 2
-        return f(x)
-
-    return fn
-
-@new_fn
-def bar(x):
-    return x ** 2
-
-print(bar(2))
