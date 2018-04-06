@@ -29,16 +29,23 @@ class Distribution(object):
         Probability = a * b
         return Probability
 
-class test(object):
-    def __getattr__(self, item):
-        def foo(*args, **kwargs):
-            print('func name: ', item)
-            print('*args: ', args)
-            print('**kwargs: ', kwargs)
-        setattr(self, item, foo)
 
-        return foo
+class A(object):
+    def foo(self):
+        print('A')
 
-a = test()
-a.bar(1,2,a=3)
+class B(A):
+    def bar(self):
+        print('B')
+
+class C(A):
+    def foo(self):
+        print('C')
+
+class D(B, C):
+    pass
+
+t = D()
+t.foo()
+
 
