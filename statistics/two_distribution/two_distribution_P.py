@@ -29,4 +29,33 @@ class Distribution(object):
         Probability = a * b
         return Probability
 
+class test1(object):
+    def __getattr__(self, item):
+        def foo(*args, **kwargs):
+            print('func name: ', item)
+            print('*args: ', args)
+            print('**kwargs: ', kwargs)
+
+
+        return foo
+
+    def __setattr__(self, key, value):
+        print('set')
+        self.__dict__['key'] = value
+
+
+class test(object):
+    def __init__(self):
+        pass
+    def __getattr__(self, item):
+        print(item)
+
+    def __setattr__(self, key, value):
+        
+        print( 'set value: {0} = {1}'.format(key, value))
+
+t = test()
+t.a # a
+t.b # b
+t.c=1 # set value: c = 1
 
