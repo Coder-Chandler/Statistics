@@ -30,22 +30,6 @@ class Distribution(object):
         return Probability
 
 
-class A(object):
-    def foo(self):
-        print('A')
 
-class B(A):
-    def bar(self):
-        print('B')
-
-class C(A):
-    def foo(self):
-        print('C')
-
-class D(B, C):
-    pass
-
-t = D()
-t.foo()
 
 
