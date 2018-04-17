@@ -1,6 +1,5 @@
 import math
 
-
 class Distribution(object):
     def distribution_coin(self, x, n):
         """
